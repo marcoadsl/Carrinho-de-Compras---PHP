@@ -40,7 +40,6 @@ class Produto{
 	}
 
 	/*		Setters 		*/
-
 	public function setNome(string $nome){
 		$this->nome = $nome;
 	}
