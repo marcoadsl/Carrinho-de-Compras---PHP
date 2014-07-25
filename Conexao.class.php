@@ -10,50 +10,58 @@ class Banco{
 		mysql_select_db($this->db) or die(mysql_error());
 	}
 
-	public function select($objeto){
-		$sql = "SELECT * FROM ".$objeto->getNomeTabela();
-		return mysql_query($sql);
+	public function close(){
+		return mysql_close();
 	}
 
-	public function insert($objeto){		
-		$sql = "INSERT INTO ";
-		switch ($objeto->getNomeTabela()) {
-			case 'Produtos':
-				$sql .= $objeto->getNomeTabela()." VALUES(null, '". $objeto->getNome()."', '".$objeto->getImagem()."', ".$objeto->getPreco().")";				
-				break;
-			case 'Usuarios':
-				$sql .= $objeto->getNomeTabela()." VALUES(null, '". $objeto->getNome()."', '".$objeto->getSenha().")";		
-			default:
+	// public function select($objeto, $condition = null){
+	// 	$sql = "SELECT * FROM ".$objeto->getNomeTabela();
+		
+	// 	if($condition != null){
+	// 		$sql .= " WHERE ".$condition;	
+	// 	}		
+	// 	return mysql_query($sql);
+	// }
+
+	// public function insert($objeto){		
+	// 	$sql = "INSERT INTO ";
+	// 	switch ($objeto->getNomeTabela()) {
+	// 		case 'Produtos':
+	// 			$sql .= $objeto->getNomeTabela()." VALUES(null, '". $objeto->getNome()."', '".$objeto->getImagem()."', ".$objeto->getPreco().")";				
+	// 			break;
+	// 		case 'Usuarios':
+	// 			$sql .= $objeto->getNomeTabela()." VALUES(null, '". $objeto->getNome()."', '".$objeto->getSenha().")";		
+	// 		default:
 				
-				break;
-		}		
-		// echo $sql;
-		return mysql_query($sql);
-	}
+	// 			break;
+	// 	}		
+	// 	// echo $sql;
+	// 	return mysql_query($sql);
+	// }
 
-	public function delete($objeto, array $condition = null){
-		if($condition != null){
-			$sql = "DELETE FROM ".$objeto->getNomeTabela()." WHERE ".$condition[0]." = ".$condition[1];					
-			// echo $sql;
-			return mysql_query($sql);
-		}
-		else{
-			echo '	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-						alert ("Informe qual(quais) registros serão o excluídos!")
-					</SCRIPT>
-				';			
-		}
-	}
+	// public function delete($objeto, array $condition = null){
+	// 	if($condition != null){
+	// 		$sql = "DELETE FROM ".$objeto->getNomeTabela()." WHERE ".$condition[0]." = ".$condition[1];					
+	// 		// echo $sql;
+	// 		return mysql_query($sql);
+	// 	}
+	// 	else{
+	// 		echo '	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+	// 					alert ("Informe qual(quais) registros serão o excluídos!")
+	// 				</SCRIPT>
+	// 			';			
+	// 	}
+	// }
 
-	public function update($objeto, array $condition = null){
-		if($condition != null){
+	// public function update($objeto, array $condition = null){
+	// 	if($condition != null){
 			
 
 
 
 
-		}
-	}
+	// 	}
+	// }
 
 }
 
