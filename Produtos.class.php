@@ -4,7 +4,6 @@ class Produto{
 	private $nome;
 	private $imagem;
 	private $preco;
-	private $nomeTabela = 'Produtos';
 	private $campos = array('nome', 'imagem', 'preco');
 
 
@@ -29,10 +28,6 @@ class Produto{
 
 	public function getPreco(){
 		return $this->preco;
-	}
-
-	public function getNomeTabela(){
-		return $this->nomeTabela;
 	}
 
 	public function getCampos(){

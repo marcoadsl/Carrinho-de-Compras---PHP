@@ -1,0 +1,65 @@
+.container-geral{
+width:240px;
+margin:auto;
+height:auto;
+}
+.container{
+padding:20px;
+border-radius:8px;
+}
+.login{
+border:solid 1px #980021;
+background-image: linear-gradient(to bottom, #cf2b4f, #980021 130%);
+}
+.welcome{
+border:solid 1px #060;
+background-image: linear-gradient(to bottom, #0A0, #030 130%);
+text-align:center;
+}
+.container-erro{
+padding:10px 0;
+text-align:center;
+font-family:Arial;
+font-size:14px;
+color:#FFF;
+border-radius:8px;
+border:solid 1px #A00;
+background-image: linear-gradient(to bottom, #F00, #C00 130%);
+}
+.container>h3{
+margin:0;
+padding:0;
+font-family:Arial;
+font-weight:100px;
+color:#FFF;
+}
+.container label{
+font-family:Arial;
+color:#FFF;
+}
+.container input[type=text], .container input[type=password]{
+border-radius:6px;
+width:185px;
+height:15px;
+padding:4px;
+font-family:Arial;
+color:#999
+}
+.container input[type=submit]{
+border:solid 1px #333;
+border-radius:6px;
+width:70px;
+padding:5px 0;
+}
+.container input[type=submit]:hover{
+background-color:#CCC;
+}
+a{
+font-family:Arial;
+color:#FFF;
+text-decoration:none;
+border:solid 1px #600;
+border-radius:6px;
+background:#900;
+padding:10px;
+}

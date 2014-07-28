@@ -7,11 +7,9 @@ class Usuario{
 	private $nomeTabela = "Usuarios";
 
 	public function __construct($id = null, $nome = null, $senha = null){
-		if($nome != null && $senha != null && $id != null){
 			$this->id = $id;
 			$this->nome = $nome;
 			$this->senha = $senha;
-		}
 	}
 
 	public function getNomeTabela(){
