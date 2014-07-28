@@ -2,13 +2,18 @@
 class UsuarioDAO{
 	private $nomeTabela = "Usuario";
 
+	public function __construct(){
+		
+	}
+
 	public function selectUsuario($usuario, $condition = null){
 		$sql = "SELECT * FROM ".$this->nomeTabela;
 		
 		if($condition != null){
 			$sql .= " WHERE ".$condition;	
 		}		
-		echo $sql;
+		// echo $sql;
+		return mysql_query($sql);
 	}
 
 	public function insertUsuario($usuario){		

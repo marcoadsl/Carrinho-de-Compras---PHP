@@ -1,21 +1,24 @@
 <?php
-// session_start();
+session_start();
 include 'Conexao.class.php';
 
 class Login{
-	public function __construct($usuario){
-		$this->logar($usuario);
+	public function __construct(){
+		// $this->logar($usuario);
 	}
 
-	public function verificaLogin(){
+	public static function verificaLogin(){
 		if(!isset($_SESSION['usuario'])){
-			// header("Location: ../index.php")
+		echo  '	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+			alert ("Necessário fazer login!!")
+		</SCRIPT>';
+			header("Location: index2.php");
 		}
 	}
 
 	public function logar($usuario){
 		$daoUsu =  new UsuarioDAO();
-		$q_usu = $daoUsu->selectUsuario($usuario, "nome = ".$usuario->getNome());
+		$q_usu = $daoUsu->selectUsuario($usuario, "nome = '".$usuario->getNome()."'");
 
 		if(mysql_num_rows($q_usu) == 1){
 			$d_usu = mysql_fetch_array($q_usu);
@@ -23,28 +26,27 @@ class Login{
 				$_SESSION['usuario'] = $d_usu['nome'];
 				header("Location: welcome.php");
 			}
-			else{
-				echo '	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-						alert ("Usuario ou senha invalido(s)")
-					</SCRIPT>
-					';	
+			else{	
+				$this->error("Usuario ou senha invalidos!!");
 			}
 		}
 		else{
-			header("Location: index.php");
-			echo '	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-						alert ("Usuario ou senha invalido(s)!")
-					</SCRIPT>
-				';	
+			header("Location: index2.php");			
+			$this->error("Usuario ou senha invalidos!!!");
 		}
+	}
+
+	public function error($msg){
+		$script =   '	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+						alert ("'.$msg.'")
+					</SCRIPT>
+				';
+		echo $script;
 	}
 
 	public function logout(){
 		session_destroy();
-		// header("Location: ../index.php");
+		header("Location: index2.php");
 	}
-
-
-
 }
 ?>
