@@ -37,6 +37,7 @@ $banco = new Banco();
                <br />
                <input type="submit" value="Enviar" name="Enviar"/>
             </form>
+            <a href="index.php">Voltar</a>
          </div>
          <?php               
             if(isset($_POST["Enviar"]) && $_POST["Enviar"] == "Enviar"){

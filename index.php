@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html lang="pt-BR">
    <head>
       <meta charset="iso-8859">
-      <title>Bem Vindo</title>
+      <title>Lojas ******</title>
  
       <link rel="stylesheet" href="css/style.css" />
    </head>
@@ -12,12 +12,29 @@
       </div>
       <div id="menu">
          <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Meu Carrinho</a></li>
-            <li><a href="">Área restrita</a></li>
+            <li><a href="index.php?acao=listar">Inicio</a></li>
+            <li><a href="index.php?acao=meucarrinho">Meu Carrinho</a></li>
+            <li><a href="welcome.php">&Aacute;rea restrita</a></li>
          </ul>
       </div>
-      <br>
-      <a href="logout.php">Sair</a>
+   </br>
+      <div id="conteudo">
+         <?php
+            if(isset($_GET['acao'])){
+               switch ($_GET['acao']) {
+                  case 'listar':
+                     include 'ListarProdutos.php';
+                     break;
+                  case 'meucarrinho':
+                     include 'MeuCarrinho.php';
+                     break;
+               }               
+            }
+            else
+               include 'ListarProdutos.php';
+
+         ?>
+      </div>
+
    </body>
 </html>

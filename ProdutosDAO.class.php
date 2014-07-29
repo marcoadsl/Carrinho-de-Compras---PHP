@@ -2,7 +2,7 @@
 class ProdutosDAO{
 	private $nomeTabela = "Produtos";
 
-	public function selectProd($produto, $condition = null){
+	public function selectProd($condition = null){
 		$sql = "SELECT * FROM ".$this->nomeTabela;
 		
 		if($condition != null){
