@@ -20,8 +20,8 @@ $banco = new Banco();
  
    </head>
    <body>
-      <div class="container-geral">
-         <div class="container login">
+      <div id="container">
+         <div class="login">
             <h3>Login</h3>
             <br />
             <form action="" method="POST">

@@ -37,7 +37,7 @@ class UsuarioDAO{
 					</SCRIPT>
 				';			
 		}
-	}	
+	}
 
 }
 

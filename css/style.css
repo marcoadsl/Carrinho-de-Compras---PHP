@@ -1,42 +1,38 @@
 body{
-	margin: 5px 5px 5px 5px;
+	margin: 0;  	
+	padding: 0; 
+	text-align: center;
 }
-
-.container-geral{
-	width:240px;
-	margin:auto;
-	height:auto;
+#container{
+/*	border: solid 1px #333;*/
+	margin: 1em auto;  	
+	width: 90%;  	
 }
-.container{
-	padding:20px;
-	border-radius:8px;
-}
-.login{
-	border:solid 1px #980021;
-	background-image:  linear-gradient(to bottom, #FFF, #CCC 20%);
-}
-.welcome{
+#banner{
 	border-radius: 30px;
 	width: 100%;
-	border:solid 1px #060;
+	border:solid 1px #FFF;
 	background-image: linear-gradient(to bottom, #FFF, #CCC 20%);
 	font-size: 30px;
 	font-family: Tahoma;
 	text-align:center;
 }
-/*.container>h3{
-	margin:0;
-	padding:0;
-	font-family:Arial;
-	font-weight:100px;
-	/*color:#FFF;*/
-	/*text-align: center;
-}*/
-.container label{
+
+/*Login */
+.login{
+	position: relative;
+	width: 20%;
+	padding:20px;
+	margin: auto;
+	border-radius:8px;
+	border:solid 1px #980021;
+	background-image:  linear-gradient(to bottom, #FFF, #CCC 20%);
+}
+.login label{
 	font-family:Arial;
 	color:#000;
 }
-.container input[type=text], .container input[type=password]{
+.login input[type=text], .login input[type=password]{
 	border-radius:6px;
 	width:185px;
 	height:15px;
@@ -44,44 +40,52 @@ body{
 	font-family:Arial;
 	color:#999
 }
-.container a{
+.login a{
 	text-decoration: none;
 	color: #000;
 	font-size: 12px;
 	font-family: Arial;
-	border:solid 1px #333;
-	padding: 0px 8px 0px 8px;
-	background-color: #FFF;
+	border:solid 1px #000;
+	border-radius: 5px;
+	background-color: #c0c0c0;
+	padding: 1px 10px 1px 9px;
+
 }
-.container a:hover{
-	background-color:#CCC;
+.login a:hover{
+	background-color:#000;
+	color: #FFF;
 }
 
 /*Menu Style*/
+#menu{
+	padding: 2px 0;
+	margin-bottom: 22px;
+}
+
 
 #menu ul{
-	padding:0px;
-	margin:0px;
-	margin-left: 480px;
+	width: 70%;
+	position: relative;
+	margin: auto;
+	padding: 0;
 	list-style:none; 
-	/*border:1px solid #c0c0c0; */
-	float:left; 
+	border:1px solid #c0c0c0; 
+	border-radius: 30px;
 	font:20px Tahoma;
 	text-align: center;
 }
 
 #menu ul li{
 	display: inline;
-	/*position:relative; */
-	float:left; 
-	border-right:1px solid #c0c0c0; 
+/*	border-right:1px solid #c0c0c0; 
+	border-left: 1px solid #c0c0c0;*/
 }
 
 #menu ul li a{
 	color:#333; 
 	text-decoration:none; 
 	padding:5px 10px; 
-	display:block;
+	display:inline-block;
 }
 
 #menu ul li a:hover{
@@ -95,9 +99,20 @@ body{
 /*Conteúdo*/
 
 #conteudo{
-	float: none;
-	margin: 0px;
-	padding: 0px;
+	width: 50%;
+	/*text-align: center;*/
+	position: relative;
+	margin: auto; /*0px 20px 20px 20px;*/
+	/*border: solid 1px #333;*/
+	font-family: Arial;
+	font-size: 18px;
+}
+#conteudo table{
+	width: 100%;
 }
 
+#conteudo img{
+	width: 120px;
+	height: 150px;
+}
 
