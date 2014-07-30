@@ -2,6 +2,10 @@
 class ProdutosDAO{
 	private $nomeTabela = "Produtos";
 
+	/*
+	SELECT * FROM tabela
+	Consulta os produtos no BD com uma cláusula [WHERE] ou não
+	*/
 	public function selectProd($condition = null){
 		$sql = "SELECT * FROM ".$this->nomeTabela;
 		
@@ -10,6 +14,11 @@ class ProdutosDAO{
 		}		
 		return mysql_query($sql);
 	}
+
+	/*
+		INSERT INTO tabela VALUES ()
+		Insere o produto passado por parametro no BD
+	*/
 
 	public function insertProd($produto){		
 		$sql = "INSERT INTO ".$this->nomeTabela." VALUES(null, '". $produto->getNome()."', '".$produto->getImagem()."', ".$produto->getPreco().")";

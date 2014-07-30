@@ -24,7 +24,7 @@ class Login{
 			$d_usu = mysql_fetch_array($q_usu);
 			if($d_usu['senha'] == $usuario->getSenha()){
 				$_SESSION['usuario'] = $d_usu['nome'];
-				header("Location: welcome.php");
+				header("Location: index.php?acao=arearestrita");
 			}
 			else{	
 				$this->error("Usuario ou senha invalidos!!");
@@ -46,7 +46,7 @@ class Login{
 
 	public function logout(){
 		session_destroy();
-		header("Location: index2.php");
+		header("Location: index.php?acao=arearestrita");
 	}
 }
 ?>

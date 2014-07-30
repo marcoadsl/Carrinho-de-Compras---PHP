@@ -15,7 +15,7 @@
             <ul>
                <li><a href="index.php?acao=listar">Inicio</a></li>
                <li><a href="index.php?acao=meucarrinho">Meu Carrinho</a></li>
-               <li><a href="welcome.php">&Aacute;rea restrita</a></li>
+               <li><a href="index.php?acao=arearestrita">&Aacute;rea restrita</a></li>
             </ul>
          </div>
       </br>
@@ -29,6 +29,8 @@
                      case 'meucarrinho':
                         include 'MeuCarrinho.php';
                         break;
+                     case 'arearestrita':
+                        include 'welcome.php';
                   }               
                }
                else
