@@ -1,4 +1,5 @@
 body{
+	/*border: solid 1px #333;*/
 	margin: 0;  	
 	padding: 0; 
 	text-align: center;
@@ -9,7 +10,7 @@ body{
 	width: 90%;  	
 }
 #banner{
-	border-radius: 30px;
+	/*border-radius: 30px;*/
 	width: 100%;
 	border:solid 1px #FFF;
 	background-image: linear-gradient(to bottom, #FFF, #CCC 20%);
@@ -101,7 +102,7 @@ body{
 #conteudo{
 	width: 70%;
 	/*text-align: center;*/
-	position: relative;
+	/*position: relative;*/
 	margin: auto; /*0px 20px 20px 20px;*/
 	/*border: solid 1px #333;*/
 	font-family: Arial;
@@ -122,7 +123,7 @@ body{
 }
 
 #conteudo a{
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	border-radius: 5px;
 	padding: 2px 4px 2px 4px;
 	color:#000; 
@@ -142,6 +143,82 @@ body{
 	height: 150px;
 }
 
+/*  Menu lateral  - Área restrita*/
+
+#nav ul{
+	/*border: 1px solid black;*/
+	margin:0;
+	padding: 0;
+	list-style: none;
+	width: 200px;
+	
+}
+
+#nav ul li{
+	position: relative;
+}
+
+#nav ul li a{
+	display: block;
+    text-decoration: none;
+    color:#333;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Conteiner - Área restrita*/
+#conteudoAR{
+	margin: 0;
+	border: 1px solid black;
+	/*margin-left:210px;*/
+	padding:0;
+	width: 100%;
+	
+	
+}
+#conteudoAR table{
+	display: inline-block;
+	position: relative;
+	margin-left: 210px;
+	width: 70%;
+	padding: 0px 0px 0px 0px;
+	bottom:60px;
+}
+
+#conteudoAR table tr:hover{
+	background-color: #F8F8FF;
+}
+
+#conteudoAR form{
+	border-radius:8px;
+	border:solid 1px #D3D3D3;
+	background-image:  linear-gradient(to bottom, #FFF, #CCC 20%);
+	display: inline-block;
+	position: relative;
+	margin-left: 176px;
+	width: 70%;
+	padding: 10px 10px 10px 10px;
+	bottom:100px;
+}
+
+#conteudoAR form input[type=text], input[type=file], label{
+	float:left;
+	border-radius:6px;
+	width:200px;
+	height:15px;
+	padding:4px;
+	font-family:Arial;
+	/*color:#999*/
+
+}
+
 .cel_internas{
 	font-size: 16px;
+}
+
+
+.sair{
+	font-weight: normal;
+	font-size: 17px;
 }
