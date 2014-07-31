@@ -31,6 +31,8 @@
                         break;
                      case 'arearestrita':
                         include 'welcome.php';
+                     case 'login':
+                        include 'index2.php';
                   }               
                }
                else

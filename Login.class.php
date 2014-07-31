@@ -1,6 +1,5 @@
 <?php
 session_start();
-include 'Conexao.class.php';
 
 class Login{
 	public function __construct(){
@@ -8,11 +7,12 @@ class Login{
 	}
 
 	public static function verificaLogin(){
+		// session_start();
 		if(!isset($_SESSION['usuario'])){
 		echo  '	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
 			alert ("Necessário fazer login!!")
 		</SCRIPT>';
-			header("Location: index2.php");
+			header("Location: index.php?acao=login");
 		}
 	}
 
@@ -31,7 +31,7 @@ class Login{
 			}
 		}
 		else{
-			header("Location: index2.php");			
+			header("Location: index.php?acao=arearestrita");			
 			$this->error("Usuario ou senha invalidos!!!");
 		}
 	}
@@ -46,7 +46,7 @@ class Login{
 
 	public function logout(){
 		session_destroy();
-		header("Location: index.php?acao=arearestrita");
+		header("Location: index.php?acao=login");
 	}
 }
 ?>

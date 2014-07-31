@@ -1,4 +1,8 @@
 <?php
+include 'Conexao.class.php';
+$conn = new Banco();
+
+
 class ProdutosDAO{
 	private $nomeTabela = "Produtos";
 

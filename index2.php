@@ -1,13 +1,16 @@
 <?php
-ini_set('display_errors',1);
-ini_set('display_startup_erros',1);
-error_reporting(E_ALL);
+// ini_set('display_errors',1);
+// ini_set('display_startup_erros',1);
+// error_reporting(E_ALL);
 
 include 'UsuarioDAO.class.php';
 include 'Usuario.class.php';
 include 'Login.class.php';
-
+include 'Conexao.class.php';
 $banco = new Banco();
+// session_start();
+
+
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">

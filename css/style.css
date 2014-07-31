@@ -20,19 +20,23 @@ body{
 
 /*Login */
 .login{
-	position: relative;
-	width: 20%;
+	/*position: relative;*/
+	height: auto;
+	width: 30%;
 	padding:20px;
 	margin: auto;
 	border-radius:8px;
-	border:solid 1px #980021;
+	border:solid 1px #D3D3D3;
 	background-image:  linear-gradient(to bottom, #FFF, #CCC 20%);
+	display: inline-block;
 }
 .login label{
+	float:left;
 	font-family:Arial;
 	color:#000;
 }
 .login input[type=text], .login input[type=password]{
+	float:left;
 	border-radius:6px;
 	width:185px;
 	height:15px;
@@ -41,19 +45,15 @@ body{
 	color:#999
 }
 .login a{
-	text-decoration: none;
+/*	text-decoration: none;
 	color: #000;
-	font-size: 12px;
+	font-size: 12px;	
 	font-family: Arial;
 	border:solid 1px #000;
 	border-radius: 5px;
 	background-color: #c0c0c0;
-	padding: 1px 10px 1px 9px;
+	padding: 1px 10px 1px 9px;*/
 
-}
-.login a:hover{
-	background-color:#000;
-	color: #FFF;
 }
 
 /*Menu Style*/
@@ -99,7 +99,7 @@ body{
 /*Conteúdo*/
 
 #conteudo{
-	width: 50%;
+	width: 70%;
 	/*text-align: center;*/
 	position: relative;
 	margin: auto; /*0px 20px 20px 20px;*/
@@ -109,6 +109,32 @@ body{
 }
 #conteudo table{
 	width: 100%;
+	/*border: 1px solid black;*/
+	border-radius: 10px;
+/*	background-color: #BEBEBE;*/
+	background-image:  linear-gradient(to right, #FFF, #CCC 100%);
+	/*border-left: 20px;*/
+	border: ;
+}
+
+#conteudo table thead{
+	font-weight: bold;
+}
+
+#conteudo a{
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 2px 4px 2px 4px;
+	color:#000; 
+	text-decoration:none;
+}
+
+#conteudo a:hover{
+	background:#333; 
+	color:#fff; 
+	-moz-box-shadow:0 3px 10px 0 #CCC; 
+	-webkit-box-shadow:0 3px 10px 0 #ccc; 
+	text-shadow:0px 0px 5px #fff; 	
 }
 
 #conteudo img{
@@ -116,3 +142,6 @@ body{
 	height: 150px;
 }
 
+.cel_internas{
+	font-size: 16px;
+}
