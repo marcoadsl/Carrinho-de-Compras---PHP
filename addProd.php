@@ -1,4 +1,8 @@
 <?php
+// ini_set('display_errors',1);
+// ini_set('display_startup_erros',1);
+// error_reporting(E_ALL);
+
 include 'Produtos.class.php';
 include 'ProdutosDAO.class.php';
    
@@ -30,6 +34,7 @@ $p_dao = new ProdutosDAO();
                <br />
                <input type="file" name="foto" id="foto" />
                <br />
+               <br/>
                <input type="submit" value="Enviar" name="Enviar"/>
                <a href="index.php">Voltar</a>
             </form>

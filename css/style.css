@@ -110,6 +110,7 @@ body{
 }
 #conteudo table{
 	width: 100%;
+	padding: 20px;
 	/*border: 1px solid black;*/
 	border-radius: 10px;
 /*	background-color: #BEBEBE;*/
@@ -117,7 +118,10 @@ body{
 	/*border-left: 20px;*/
 	border: ;
 }
-
+#conteudo table td{
+	padding: 0;
+	border-radius: 5px;
+}
 #conteudo table thead{
 	font-weight: bold;
 }
@@ -170,7 +174,7 @@ body{
 /* Conteiner - Área restrita*/
 #conteudoAR{
 	margin: 0;
-	border: 1px solid black;
+/*	border: 1px solid black;*/
 	/*margin-left:210px;*/
 	padding:0;
 	width: 100%;
@@ -178,22 +182,30 @@ body{
 	
 }
 #conteudoAR table{
+	text-align: center;
 	display: inline-block;
 	position: relative;
 	margin-left: 210px;
-	width: 70%;
+	width: 600px;
 	padding: 0px 0px 0px 0px;
 	bottom:60px;
+}
+#conteudo table tr{
+	padding: 0;
 }
 
 #conteudoAR table tr:hover{
 	background-color: #F8F8FF;
 }
+#conteudo table td{
+	text-align: center;
+	padding: 5px 5px 5px 5px;
+}
 
 #conteudoAR form{
 	border-radius:8px;
 	border:solid 1px #D3D3D3;
-	background-image:  linear-gradient(to bottom, #FFF, #CCC 20%);
+	background-image:  linear-gradient(to right, #FFF, #CCC 100%);
 	display: inline-block;
 	position: relative;
 	margin-left: 176px;
@@ -202,17 +214,27 @@ body{
 	bottom:100px;
 }
 
-#conteudoAR form input[type=text], input[type=file], label{
-	float:left;
+#conteudoAR form input[type=text], input[type=file]{
+	/*float:right;*/
 	border-radius:6px;
 	width:200px;
 	height:15px;
 	padding:4px;
+	margin: auto;
 	font-family:Arial;
 	/*color:#999*/
 
 }
-
+#conteudoAR label{
+	position: relative;
+	float:left;
+	border-radius:6px;
+	width:20px;
+	/*height:15px;*/
+	margin-left: 40px;
+	padding:10px;
+	font-family:Arial;
+}
 .cel_internas{
 	font-size: 16px;
 }

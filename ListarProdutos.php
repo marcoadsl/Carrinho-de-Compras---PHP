@@ -24,12 +24,12 @@ $car = new Carrinho();
 <table border=1>
 	<?php while ($result = mysql_fetch_object($query)) { ?>
 	<thead>
-		<td></td>
+		<td> </td>
 		<td>Nome</td>
 		<td>Pre&ccedil;o</td>
 	</thead>
 	<tr> 
-		<td class="cel_internas"><?php echo "<img src='img/".$result->imagem."' />";?></td>
+		<td rowspan="2" class="cel_internas"><?php echo "<img src='img/".$result->imagem."' />";?></td>
 		<td class="cel_internas"><?php echo $result->nome ?></td>
 		<td class="cel_internas"><?php echo number_format($result->preco, 2, ",", null) ?></td>
 		<td><?php echo "<a href='index.php?acao=listar&op=add&id=".$result->id."'>Comprar</a>"?></td>
